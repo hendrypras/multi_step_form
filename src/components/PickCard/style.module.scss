@@ -1,0 +1,44 @@
+@import '@styles/base';
+.wrapper {
+  border-radius: 8px;
+  border: 1px solid $color-marine-blue;
+  width: 100%;
+  height: max-content;
+  padding: 1rem;
+  @include directionX;
+  justify-content: space-between;
+  @include screen('small') {
+    width: auto;
+  }
+  .leftWrapper {
+    @include directionX;
+    gap: 1.5rem;
+    .checkBox {
+      width: 20px;
+      height: 20px;
+    }
+    .textWrapper {
+      @include directionY;
+      gap: 5px;
+      .title {
+        font-size: 20px;
+        color: $color-marine-blue;
+        font-weight: 600;
+      }
+      .subTitle {
+        font-size: 14px;
+        color: $color-cool-gray;
+        font-weight: 500;
+      }
+    }
+  }
+  .price {
+    color: $color-marine-blue;
+    font-size: 14px;
+    height: 100%;
+    @include directionX;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+}

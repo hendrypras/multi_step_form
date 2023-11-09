@@ -1,0 +1,44 @@
+@import '@styles/base';
+.wrapper {
+  border-radius: 8px;
+  border: 1.2px solid $color-light-gray;
+  width: 5.5rem;
+  height: max-content;
+  padding: 0.8rem;
+  @include screen('small') {
+    width: auto;
+    @include directionX;
+    gap: 1rem;
+  }
+  .wrapperContentText {
+    @include screen('small') {
+      @include directionY;
+      gap: 0.2rem;
+    }
+  }
+  .title {
+    font-size: 16px;
+    color: $color-marine-blue;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    @include screen('small') {
+      margin-top: 0;
+    }
+  }
+  .price {
+    font-size: 14px;
+    color: $color-cool-gray;
+    font-weight: 500;
+  }
+  .time {
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-marine-blue;
+    @include screen('small') {
+      display: none;
+    }
+  }
+}
+.wrapper.active {
+  border: 2px solid $color-marine-blue;
+}

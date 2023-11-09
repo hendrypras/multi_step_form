@@ -1,0 +1,139 @@
+@import '@styles/base';
+.contentWrapper {
+  width: 50%;
+  height: 70vh;
+  position: relative;
+  @include directionY;
+  justify-content: center;
+  align-items: start;
+  padding: 0 5rem;
+  @include screen('small') {
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    overflow: hidden;
+    padding: 1.5rem 1.5rem;
+    height: max-content;
+    margin: 0 1rem;
+    border-radius: 12px;
+    background-color: white;
+  }
+  .headingText {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-marine-blue;
+  }
+  .subText {
+    color: $color-cool-gray;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+  .paymentWrapper {
+    width: 100%;
+    margin-top: 2rem;
+    @include directionY;
+    gap: 1rem;
+    @include screen('small') {
+      width: auto;
+    }
+    .paymentCard {
+      background-color: $color-magnolia;
+      width: 100%;
+      padding: 0.7rem 1.3rem;
+      border-radius: 12px;
+      .headWrapper {
+        @include directionX;
+        justify-content: space-between;
+        align-items: center;
+        .wrapperLeft {
+          @include directionY;
+          gap: 0.3rem;
+          .headCardTextLeft {
+            @include directionX;
+            gap: 4px;
+            font-size: 18px;
+            font-weight: 500;
+            color: $color-marine-blue;
+          }
+          .changeBtn {
+            font-size: 15px;
+            font-weight: 500;
+            color: $color-cool-gray;
+            text-decoration: underline;
+          }
+        }
+        .price {
+          font-size: 18px;
+          font-weight: 600;
+          color: $color-marine-blue;
+        }
+      }
+      .hr {
+        width: 100%;
+        border: 1px solid $color-light-gray;
+        margin-top: 1.5rem;
+      }
+      .serviceWrapper {
+        width: 100%;
+        margin-top: 1rem;
+        @include directionY;
+        gap: 0.8rem;
+        .wrapperContent {
+          @include directionX;
+          justify-content: space-between;
+          .service {
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-cool-gray;
+          }
+          .price {
+            @include directionX;
+            color: rgb(5, 88, 5);
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .toalWrapper {
+      @include directionX;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem 1.3rem;
+      width: 100%;
+      .leftWrapper {
+        @include directionX;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-cool-gray;
+        gap: 0.3rem;
+      }
+      .priceTotal {
+        font-size: 22px;
+        font-weight: 600;
+        color: $color-purplish-blue;
+      }
+    }
+  }
+  .wrapperBtn {
+    @include directionX;
+    justify-content: space-between;
+    margin-top: 4rem;
+    width: 100%;
+    @include screen('small') {
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      left: 0;
+      bottom: 0;
+      height: 4.5rem;
+      @include directionX;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}

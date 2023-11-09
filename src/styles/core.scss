@@ -1,0 +1,38 @@
+@import './base.scss';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root {
+  font-family: Poppins, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  @include apply-at-md-size {
+    font-size: 120%;
+  }
+
+  @include apply-at-lg-size {
+    font-size: 125%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 0;
+  background-color: $color-magnolia;
+  color: var(--color-text);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html[data-theme='light'] {
+  @include light-theme;
+}
+
+html[data-theme='dark'] {
+  @include dark-theme;
+}

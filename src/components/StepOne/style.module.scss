@@ -1,0 +1,84 @@
+@import '@styles/base';
+.contentWrapper {
+  width: 50%;
+  height: 70vh;
+  position: relative;
+  @include directionY;
+  justify-content: center;
+  align-items: start;
+  padding: 0 5rem;
+  @include screen('small') {
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    overflow: hidden;
+    padding: 1.5rem 1.5rem;
+    height: max-content;
+    margin: 0 1rem;
+    border-radius: 12px;
+    background-color: white;
+  }
+  .headingText {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-marine-blue;
+  }
+  .subText {
+    color: $color-cool-gray;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+  .form {
+    @include directionY;
+    width: 100%;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    .inputWrapper {
+      @include directionY;
+      gap: 5px;
+      .textWrapper {
+        @include directionX;
+        justify-content: space-between;
+        .label {
+          font-size: 16px;
+          font-weight: 500;
+          color: $color-marine-blue;
+        }
+        .errorText {
+          font-size: 16px;
+          font-weight: 600;
+          color: rgb(194, 28, 28);
+        }
+      }
+      .input {
+        height: 48px;
+        border-radius: 8px;
+        border: 1.5px solid $color-light-gray;
+        padding: 0 0.6rem;
+        color: $color-marine-blue;
+        font-size: 18px;
+        font-weight: 700;
+        outline: none;
+      }
+    }
+  }
+  .wrapperBtn {
+    @include directionX;
+    justify-content: end;
+    margin-top: 4rem;
+    width: 100%;
+    @include screen('small') {
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      left: 0;
+      bottom: 0;
+      height: 4.5rem;
+      @include directionX;
+      justify-content: end;
+      align-items: center;
+    }
+  }
+}

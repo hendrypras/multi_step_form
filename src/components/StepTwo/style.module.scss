@@ -1,0 +1,78 @@
+@import '@styles/base';
+.contentWrapper {
+  width: 50%;
+  height: 70vh;
+  position: relative;
+  @include directionY;
+  justify-content: center;
+  align-items: start;
+  padding: 0 5rem;
+  @include screen('small') {
+    width: auto;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    overflow: hidden;
+    padding: 1.5rem 1.5rem;
+    height: max-content;
+    margin: 0 1rem;
+    border-radius: 12px;
+    background-color: white;
+  }
+  .headingText {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-marine-blue;
+  }
+  .subText {
+    color: $color-cool-gray;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+  .cardWrapper {
+    @include directionX;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    @include screen('small') {
+      @include directionY;
+      width: 100%;
+    }
+  }
+  .wrapperSwitch {
+    margin-top: 1.5rem;
+    @include directionX;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    background-color: $color-magnolia;
+    padding: 0.4rem 0;
+    border-radius: 6px;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: $color-cool-gray;
+    }
+    .title.active {
+      color: $color-marine-blue;
+    }
+  }
+  .wrapperBtn {
+    @include directionX;
+    justify-content: space-between;
+    margin-top: 4rem;
+    width: 100%;
+    @include screen('small') {
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      left: 0;
+      bottom: 0;
+      height: 4.5rem;
+      @include directionX;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+}

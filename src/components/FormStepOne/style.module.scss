@@ -1,0 +1,35 @@
+@import '@styles/base';
+.form {
+  @include directionY;
+  width: 100%;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  .inputWrapper {
+    @include directionY;
+    gap: 5px;
+    .textWrapper {
+      @include directionX;
+      justify-content: space-between;
+      .label {
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-marine-blue;
+      }
+      .errorText {
+        font-size: 16px;
+        font-weight: 600;
+        color: rgb(194, 28, 28);
+      }
+    }
+    .input {
+      height: 48px;
+      border-radius: 8px;
+      border: 1.5px solid $color-light-gray;
+      padding: 0 0.6rem;
+      color: $color-marine-blue;
+      font-size: 18px;
+      font-weight: 700;
+      outline: none;
+    }
+  }
+}

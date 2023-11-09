@@ -1,0 +1,63 @@
+@import '@styles/base';
+.sidebarWrapper {
+  border-radius: 0.5rem;
+  background-image: url('/public/images/bg-sidebar-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20%;
+  padding: 2rem;
+  gap: 1rem;
+  height: auto;
+  @include directionY;
+  @include screen('small') {
+    width: auto;
+    background-image: url('public/images/bg-sidebar-mobile.svg');
+    @include directionX;
+    justify-content: center;
+    height: 100px;
+    border-radius: 0;
+  }
+  .stepWrapper {
+    @include directionX;
+    justify-content: start;
+    gap: 1rem;
+    .numberIcon {
+      background-color: transparent;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      @include directionX;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      margin-top: 5px;
+      border: 1px solid $color-white;
+    }
+    .numberIcon.active {
+      background-color: $color-light-blue;
+      color: #000;
+    }
+    .textWrapper {
+      @include directionY;
+      justify-content: start;
+      align-items: start;
+      @include screen('small') {
+        display: none;
+      }
+      .textHead {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-cool-gray;
+      }
+      .textBottom {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        color: $color-magnolia;
+      }
+    }
+  }
+}
